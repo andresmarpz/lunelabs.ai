@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Footer from "@/app/_components/footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -59,9 +60,21 @@ export default function RootLayout({
         <link rel="manifest" href="/site.webmanifest" />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={[
+          `${geistSans.variable} ${geistMono.variable} antialiased light`,
+          "min-h-screen font-mono relative",
+        ].join(" ")}
       >
-        {children}
+        <div className="grid min-h-screen grid-rows-[1fr_auto] grid-cols-1 lg:grid-cols-[1fr_auto_1fr]">
+          {children}
+          <Footer />
+        </div>
+        <div
+          style={{
+            backgroundImage: "url(/media/bg-noise.png)",
+          }}
+          className="pointer-events-none [z-index:-1] absolute inset-0 bg-[size:180px] bg-repeat opacity-[0.0175]"
+        ></div>
       </body>
     </html>
   );
