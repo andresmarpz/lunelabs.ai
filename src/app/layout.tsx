@@ -60,15 +60,11 @@ export default function RootLayout({
         <link rel="manifest" href="/site.webmanifest" />
       </head>
       <body
-        className={[
-          `${geistSans.variable} ${geistMono.variable} antialiased light`,
-          "min-h-screen font-mono relative",
-        ].join(" ")}
+        className={`${geistSans.variable} ${
+          geistMono.variable
+        } antialiased light ${["min-h-screen font-mono relative"].join(" ")}`}
       >
-        <div className="grid min-h-screen grid-rows-[1fr_auto] grid-cols-1 lg:grid-cols-[1fr_auto_1fr]">
-          {children}
-          <Footer />
-        </div>
+        {children}
         <div
           style={{
             backgroundImage: "url(/media/bg-noise.png)",
