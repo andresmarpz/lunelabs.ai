@@ -1,14 +1,21 @@
+import { LuneLogo } from "@/components/LuneLogo";
+
 export default function RutPage() {
   return (
     <main className="min-h-screen flex items-center justify-center p-4 bg-neutral-950">
       <div
-        className="w-full max-w-lg aspect-video bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950 text-white rounded-2xl p-6 flex flex-col justify-between shadow-2xl"
+        className="w-full max-w-lg aspect-video bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950 text-white rounded-2xl p-6 flex flex-col justify-between shadow-2xl relative"
         style={{
           aspectRatio: "16/9",
           boxShadow:
             "0 1px 15px 0 rgba(154,170,255,.02),0 0 8px -4px rgba(154,170,255,.02),inset 0 1px 1px 0 hsla(0,0%,100%,.22)",
         }}
       >
+        {/* Floating logo - top right */}
+        <div className="absolute top-6 right-6">
+          <LuneLogo size={40} className="rounded-full shadow-[0_4px_12px_rgba(0,0,0,0.4)]" />
+        </div>
+
         {/* Top row: Company name and tagline */}
         <div className="flex justify-between items-start">
           <div>
