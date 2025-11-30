@@ -23,13 +23,11 @@ export default function RutPage() {
   };
 
   return (
-    <main className="h-screen w-screen flex items-center justify-center">
+    <main className="h-dvh w-dvw flex items-center justify-center overflow-hidden relative">
       {/* Rotation wrapper - rotates content 90° for landscape viewing on portrait phone */}
       <div
         className="flex items-center justify-center"
         style={{
-          width: "100dvh",
-          height: "100dvw",
           transform: "rotate(90deg)",
         }}
       >
@@ -37,7 +35,7 @@ export default function RutPage() {
         <div
           className="rounded-3xl relative"
           style={{
-            width: "90%",
+            width: "90dvh",
             aspectRatio: "16/9",
             backgroundColor: "rgb(75,40,30)",
             boxShadow:
