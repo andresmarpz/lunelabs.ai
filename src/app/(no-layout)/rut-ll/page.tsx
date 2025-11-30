@@ -2,7 +2,7 @@ import { LuneLogo } from "@/components/LuneLogo";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  themeColor: "#2b2b2b", // Matches body background oklch(17% 0 0)
+  themeColor: "#111111", // Matches body background oklch(17% 0 0)
 };
 
 export default function RutPage() {
