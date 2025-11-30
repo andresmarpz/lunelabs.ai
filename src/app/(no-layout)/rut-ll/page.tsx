@@ -3,17 +3,17 @@ import { LuneLogo } from "@/components/LuneLogo";
 export default function RutPage() {
   // Embossed/carved text style - sharp 0.5px peek: black on top, near-white on bottom
   const embossedText = {
-    color: "rgba(145, 115, 95, 1)",
+    color: "rgba(185, 155, 135, 0.75)",
     textShadow: "0 -0.75px 0 rgba(0,0,0,0.7), 0 0.5px 0 rgba(255,250,240,0.55)",
   };
 
   const embossedTextLight = {
-    color: "rgba(150, 120, 100, 1)",
+    color: "rgba(200, 170, 150, 0.85)",
     textShadow: "0 -0.75px 0 rgba(0,0,0,0.6), 0 0.5px 0 rgba(255,250,240,0.5)",
   };
 
   const embossedLabel = {
-    color: "rgba(155, 125, 105, 1)",
+    color: "rgba(190, 160, 140, 0.95)",
     textShadow: "0 -0.75px 0 rgba(0,0,0,0.5), 0 0.5px 0 rgba(255,250,240,0.4)",
   };
 
@@ -24,7 +24,7 @@ export default function RutPage() {
         className="w-full max-w-lg rounded-3xl relative"
         style={{
           aspectRatio: "16/9",
-          backgroundColor: "rgb(78,49,37)",
+          backgroundColor: "rgb(78,43,33)",
           boxShadow:
             "0 30px 60px -15px rgba(0,0,0,0.6), 0 15px 30px -10px rgba(0,0,0,0.4), inset -1px -1px 0 0 rgba(255,255,255,0.15), inset 1px 1.5px 0 0 rgba(0,0,0,0.15)",
         }}
