@@ -35,7 +35,7 @@ export default function RutPage() {
         <div
           className="rounded-3xl relative"
           style={{
-            width: "90dvh",
+            width: "80dvh",
             aspectRatio: "16/9",
             backgroundColor: "rgb(75,40,30)",
             boxShadow:
