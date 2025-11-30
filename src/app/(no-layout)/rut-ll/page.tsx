@@ -28,8 +28,8 @@ export default function RutPage() {
       <div
         className="flex items-center justify-center"
         style={{
-          width: "100vh",
-          height: "100vw",
+          width: "100dvh",
+          height: "100dvw",
           transform: "rotate(90deg)",
         }}
       >
