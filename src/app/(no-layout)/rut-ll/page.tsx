@@ -1,4 +1,9 @@
 import { LuneLogo } from "@/components/LuneLogo";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  themeColor: "#2b2b2b", // Matches body background oklch(17% 0 0)
+};
 
 export default function RutPage() {
   // Embossed/carved text style - sharp 0.5px peek: black on top, near-white on bottom
@@ -18,18 +23,28 @@ export default function RutPage() {
   };
 
   return (
-    <main className="min-h-screen flex items-center justify-center p-4">
-      {/* Outer card - leather base */}
+    <main className="h-screen w-screen overflow-hidden flex items-center justify-center">
+      {/* Rotation wrapper - rotates content 90° for landscape viewing on portrait phone */}
       <div
-        className="w-full max-w-lg rounded-3xl relative"
+        className="flex items-center justify-center"
         style={{
-          aspectRatio: "16/9",
-          backgroundColor: "rgb(75,40,30)",
-          boxShadow:
-            "0 30px 60px -15px rgba(0,0,0,0.5), 0 15px 30px -10px rgba(0,0,0,0.4), inset -1px -1px 0 0 rgba(255,255,255,0.2), inset 1px 1.5px 0 0 rgba(0,0,0,0.175)",
-          filter: "saturate(1.225) brightness(0.89)",
+          width: "100vh",
+          height: "100vw",
+          transform: "rotate(90deg)",
         }}
       >
+        {/* Outer card - leather base */}
+        <div
+          className="rounded-3xl relative"
+          style={{
+            width: "85%",
+            aspectRatio: "16/9",
+            backgroundColor: "rgb(75,40,30)",
+            boxShadow:
+              "0 30px 60px -15px rgba(0,0,0,0.5), 0 15px 30px -10px rgba(0,0,0,0.4), inset -1px -1px 0 0 rgba(255,255,255,0.2), inset 1px 1.5px 0 0 rgba(0,0,0,0.175)",
+            filter: "saturate(1.225) brightness(0.89)",
+          }}
+        >
         {/* Carved logo - top right */}
         <div
           className="absolute top-8 right-8 z-10 rounded-full"
@@ -168,6 +183,7 @@ export default function RutPage() {
             </div>
           </div>
         </div>
+      </div>
       </div>
     </main>
   );
