@@ -18,7 +18,7 @@ export default function RutPage() {
   };
 
   return (
-    <main className="min-h-screen flex items-center justify-center p-4 bg-black">
+    <main className="min-h-screen flex items-center justify-center p-4">
       {/* Outer card - leather base */}
       <div
         className="w-full max-w-lg rounded-3xl relative"

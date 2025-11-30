@@ -15,8 +15,8 @@
 
 html,
 body {
-  background-color: var(--color-background);
-  color: var(--color-foreground);
+  background-color: oklch(17% 0 0);
+  color: var(--foreground);
 }
 
 /* Selection styling for headings and paragraphs */
