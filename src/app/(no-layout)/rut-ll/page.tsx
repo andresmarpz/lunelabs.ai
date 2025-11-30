@@ -3,12 +3,12 @@ import { LuneLogo } from "@/components/LuneLogo";
 export default function RutPage() {
   // Embossed/carved text style - sharp 0.5px peek: black on top, near-white on bottom
   const embossedText = {
-    color: "rgba(185, 155, 135, 0.75)",
+    color: "rgba(180, 150, 130, 0.75)",
     textShadow: "0 -0.75px 0 rgba(0,0,0,0.7), 0 0.5px 0 rgba(255,250,240,0.55)",
   };
 
   const embossedTextLight = {
-    color: "rgba(200, 170, 150, 0.85)",
+    color: "rgba(175, 145, 125, 0.80)",
     textShadow: "0 -0.75px 0 rgba(0,0,0,0.6), 0 0.5px 0 rgba(255,250,240,0.5)",
   };
 
@@ -24,23 +24,45 @@ export default function RutPage() {
         className="w-full max-w-lg rounded-3xl relative"
         style={{
           aspectRatio: "16/9",
-          backgroundColor: "rgb(78,43,33)",
+          backgroundColor: "rgb(75,40,30)",
           boxShadow:
-            "0 30px 60px -15px rgba(0,0,0,0.6), 0 15px 30px -10px rgba(0,0,0,0.4), inset -1px -1px 0 0 rgba(255,255,255,0.15), inset 1px 1.5px 0 0 rgba(0,0,0,0.15)",
+            "0 30px 60px -15px rgba(0,0,0,0.5), 0 15px 30px -10px rgba(0,0,0,0.4), inset -1px -1px 0 0 rgba(255,255,255,0.2), inset 1px 1.5px 0 0 rgba(0,0,0,0.175)",
+          filter: "saturate(1.225) brightness(0.89)",
         }}
       >
-        {/* Floating logo - top right */}
-        <div className="absolute top-8 right-8 z-10">
-          <LuneLogo
-            size={40}
-            className="rounded-full shadow-[0_4px_12px_rgba(0,0,0,0.5)]"
-          />
+        {/* Carved logo - top right */}
+        <div
+          className="absolute top-8 right-8 z-10 rounded-full"
+          style={{
+            boxShadow:
+              "inset 2px 2px 4px rgba(0,0,0,0.6), inset -1px -1px 2px rgba(255,240,220,0.25), 0 1px 1px rgba(255,240,220,0.15), -0.5px 0.55px 0.5px rgba(255,240,220,0.085)",
+          }}
+        >
+          <LuneLogo size={40} className="rounded-full opacity-80" />
         </div>
+        {/* Left-side lighting overlay - diffused light source */}
+        <div
+          className="absolute inset-0 pointer-events-none rounded-3xl overflow-hidden"
+          style={{
+            background:
+              "radial-gradient(ellipse 180% 150% at -10% 40%, rgba(180,120,80,0.15) 0%, rgba(160,100,60,0.18) 30%, transparent 70%)",
+          }}
+        />
+
+        {/* Subtle shadow gradient on right side for depth */}
+        <div
+          className="absolute inset-0 pointer-events-none rounded-3xl overflow-hidden"
+          style={{
+            background:
+              "linear-gradient(90deg, transparent 50%, rgba(0,0,0,0.11) 100%)",
+          }}
+        />
+
         {/* Noise texture overlay */}
         <div
           className="absolute inset-0 opacity-[0.08] pointer-events-none rounded-3xl overflow-hidden"
           style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E")`,
+            backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.45' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E")`,
           }}
         />
 
